@@ -4,17 +4,28 @@ import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 
 const Notifications = (props) => {
   return (
-    <div className="notification">
+    <div
+      className={
+        props.unread
+          ? "notification notification--unread"
+          : "notification notification--read"
+      }
+    >
       <div className="notification__img">
-        <img src={props.img} />
+        <img src={props.img} alt="Avatar" />
       </div>
-      <div className="notification__text">
-        <p>This is the Name</p>
-        <p>This is the example text</p>
-        <p>This is the Event</p>
-      </div>
-      <div className="notification__unread">
-        <FontAwesomeIcon icon={faAsterisk} />
+      <div className="notification__content">
+        <div className="notification__desc">
+          <span className="notification__name">{props.name}</span>
+          <span className="notification__text">{props.text}</span>
+          <span className="notification__event">{props.event}</span>
+          <span className="notification__asterix">
+            {props.unread && (
+              <FontAwesomeIcon icon={faAsterisk} className="asterisk-icon" />
+            )}
+          </span>
+        </div>
+        <div className="notification__time">{props.time}</div>
       </div>
     </div>
   );
