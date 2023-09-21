@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./NotifHeader.css";
 
-const NotifHeader = () => {
+const NotifHeader = (props) => {
   return (
     <div className="header">
       <div className="header__notifs">
         <h1>Notifications</h1>
-        <p>3</p>
+        <p>{props.unreadCount}</p>
       </div>
       <div className="header__read">
-        <p>Mark all as read</p>
+        <p onClick={props.markAllAsRead}>Mark all as read</p>
       </div>
     </div>
   );
