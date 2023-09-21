@@ -30,3 +30,13 @@
   font-size: 1rem;
   color: var(--dark-grayish-blue);
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header__notifs {
+    margin-bottom: 1rem;
+  }
+}

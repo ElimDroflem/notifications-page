@@ -23,6 +23,7 @@
 .notification__name {
   font-weight: bold;
   font-size: 1.1rem;
+  margin-right: 0.5rem;
 }
 
 .notification__desc {
@@ -35,18 +36,17 @@
 
 .notification__text {
   color: var(--dark-grayish-blue);
-  margin-left: 0.5rem;
 }
 
 .notification__event {
   color: var(--dark-grayish-blue);
-  margin-left: 0.2rem;
+  margin-right: 0.2rem;
   font-weight: bold;
 }
 
 .notification__org {
   color: var(--blue);
-  margin-left: 0.3rem;
+  margin-right: 0.2rem;
   font-weight: bold;
 }
 
@@ -80,4 +80,27 @@
 
 .notification--read {
   background-color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .notification {
+    padding: 0.5rem 1rem;
+    line-height: 1.5; /* adjust as needed */
+  }
+
+  .notification__img img {
+    width: 2.5rem;
+  }
+
+  .notification__name {
+    font-size: 0.9rem;
+  }
+
+  .notification__content {
+    margin-left: 1rem;
+  }
+
+  .notification__desc {
+    font-size: 0.9rem; /* you can reduce the font-size if necessary */
+  }
 }
