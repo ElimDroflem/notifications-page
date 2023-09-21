@@ -1,0 +1,107 @@
+.notification {
+  background-color: var(--light-grayish-blue-1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.4rem;
+  align-items: center;
+  min-height: 5rem;
+  padding: 0 1.5rem;
+}
+
+.notification__img img {
+  width: 3rem;
+  margin: 0;
+}
+
+.notification__content {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification__name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+.notification__desc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.notification__text {
+  color: var(--dark-grayish-blue);
+  margin-right: 0.2rem;
+}
+
+.notification__event {
+  color: var(--dark-grayish-blue);
+  margin-right: 0.2rem;
+  font-weight: bold;
+}
+
+.notification__org {
+  color: var(--blue);
+  margin-right: 0.2rem;
+  font-weight: bold;
+}
+
+.notification__asterix {
+  margin-left: 0.2rem;
+  color: var(--red);
+}
+
+.asterisk-icon {
+  font-size: 14px;
+}
+
+.bell-icon {
+  color: var(--blue);
+  margin-left: 1rem;
+}
+
+.notification__time {
+  margin-top: 0.4rem;
+  color: hsl(219, 14%, 63%);
+}
+
+.notification__message {
+  border: 1px solid black;
+  margin-top: 1rem;
+}
+
+.notification--unread {
+  background-color: var(--light-grayish-blue-1);
+}
+
+.notification--read {
+  background-color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .notification {
+    padding: 0.5rem 1rem;
+    line-height: 1.5; /* adjust as needed */
+  }
+
+  .notification__img img {
+    width: 2.5rem;
+  }
+
+  .notification__name {
+    font-size: 0.9rem;
+  }
+
+  .notification__content {
+    margin-left: 1rem;
+  }
+
+  .notification__desc {
+    font-size: 0.9rem; /* you can reduce the font-size if necessary */
+  }
+}
