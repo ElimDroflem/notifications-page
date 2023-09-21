@@ -36,6 +36,7 @@
 
 .notification__text {
   color: var(--dark-grayish-blue);
+  margin-right: 0.2rem;
 }
 
 .notification__event {
