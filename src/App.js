@@ -21,6 +21,7 @@ function App() {
     (notification) => notification.unread
   ).length;
 
+  // makes a note unread
   const markAsRead = (index) => {
     setNotifications((prevNotifications) =>
       prevNotifications.map((notification, i) =>
